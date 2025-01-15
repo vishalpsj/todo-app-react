@@ -1,0 +1,49 @@
+/* mobile first approach4 */
+/* base 320px */
+
+@media screen and (min-width: 320px){
+    html{
+        font-size: 62.5%;
+    }
+}
+@media screen and (min-width: 425px){
+    html{
+        font-size: 68.75%;
+    }
+}
+@media screen and (min-width: 768px){
+    html{
+        font-size: 75%;
+    }
+    .input{
+        width: 80%;
+    }
+    .todoSection{
+        width: 80%;
+    }
+    .todoControl{
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+@media screen and (min-width: 1024px){
+    html{
+        font-size: 81.25%;
+    }
+    .input{
+        width: 75%;
+    }
+    .todoSection{
+        width: 75%;
+    }
+    .todoControl{
+        justify-content: center;
+        gap: 3rem;
+    }
+
+}
+@media screen and (min-width: 1440px){
+    html{
+        font-size: 100%;
+    }
+}

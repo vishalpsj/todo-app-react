@@ -1,6 +1,6 @@
 .container{
-    width: 70vw;
-    height: 90vh;
+    width: 90vw;
+    height: 95vh;
     background-color: #0000002f;
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -14,12 +14,12 @@
 }
 
 h1{
-    font-size: 4rem;
+    font-size: 3rem;
     color: #fff;
 }
 
 .input{
-    width: 70%;
+    width: 90%;
     border: 1px solid #ccc;
     border-radius: 20px;
 }
@@ -53,7 +53,7 @@ button:hover{
 }
 
 .todoSection{
-    width:70%;
+    width:90%;
     margin-top: 3rem;
     overflow: scroll;
     overflow-x: hidden;
@@ -73,7 +73,7 @@ button:hover{
     align-items: center;
     background-color: #ddd;
     font-size: 1.5rem;
-    padding: .5rem 1.5rem;
+    padding: .5rem 1rem;
     border-radius: 20px;
     transition: all 0.3s;
 
@@ -84,20 +84,27 @@ button:hover{
 }
 
 .todoTask{
-    width: 90%;
+    width: 80%;
+    padding-right: 1rem;
+    word-break: break-all;
 }
 
 .todoControl{
-    width: 10%;
+    width: 20%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 0 .8rem;
 }
 .check{
     color: green;
+    font-size: 2rem;
+    border: 1px solid green;
+    border-radius: 50%;
 }
 
 .dlt{
     color: red;
+    font-size: 2rem;
+    border: 1px solid red;
+    border-radius: 50%;
 }

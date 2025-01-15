@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Todo.css'
+import '../responsive.css'
 import { MdCheck, MdDeleteForever } from "react-icons/md";
 
 
