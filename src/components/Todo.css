@@ -1,4 +1,4 @@
-.container{
+.container {
     width: 90vw;
     height: 95vh;
     background-color: #0000002f;
@@ -10,21 +10,22 @@
     align-items: center;
     gap: 1rem;
     border-bottom: 5px solid #ffffff54;
-  
+
 }
 
-h1{
+h1 {
     font-size: 3rem;
     color: #fff;
+    font-family: "Shadows Into Light", serif;
 }
 
-.input{
+.input {
     width: 90%;
     border: 1px solid #ccc;
     border-radius: 20px;
 }
 
-input{
+input {
     border: none;
     background-color: transparent;
     outline: none;
@@ -34,7 +35,7 @@ input{
     color: #fff;
 }
 
-button{
+button {
     width: 20%;
     font-size: 1.5rem;
     padding: .5rem;
@@ -44,29 +45,29 @@ button{
     transition: all .3s;
 }
 
-input::placeholder{
+input::placeholder {
     color: #bbb;
 }
 
-button:hover{
+button:hover {
     background-color: #fff;
 }
 
-.todoSection{
-    width:90%;
+.todoSection {
+    width: 90%;
     margin-top: 3rem;
     overflow: scroll;
     overflow-x: hidden;
 }
 
-.unorderedList{
+.unorderedList {
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
     gap: 1rem;
 }
 
-.todoItem{
+.todoItem {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -79,32 +80,49 @@ button:hover{
 
 }
 
-.todoItem:hover{
-    background-color:#ffffffb5 ;
+.todoItem:hover {
+    background-color: #ffffffb5;
 }
 
-.todoTask{
+.todoTask {
     width: 80%;
     padding-right: 1rem;
     word-break: break-all;
 }
 
-.todoControl{
+.todoControl {
     width: 20%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.check{
-    color: green;
+
+.check {
+    transition: all .3s;
+    background-color: green;
+    color: #fff;
     font-size: 2rem;
     border: 1px solid green;
     border-radius: 50%;
+    cursor: pointer;
 }
 
-.dlt{
+.check:hover {
+    color: green;
+    background-color: transparent;
+
+}
+
+.dlt {
     color: red;
     font-size: 2rem;
+    transition: all .3s;
     border: 1px solid red;
     border-radius: 50%;
+    cursor: pointer;
+}
+
+.dlt:hover {
+    background-color: red;
+    color: #333;
 }
