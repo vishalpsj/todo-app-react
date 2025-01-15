@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './Todo.css'
 import '../responsive.css'
+import { DateTime } from './DateTime';
 import { MdCheck, MdDeleteForever } from "react-icons/md";
 
 
@@ -28,7 +29,7 @@ export const Todo = () => {
         <>
             <div className="container">
                 <h1>To do App</h1>
-                {/* <div className="time"></div> */}
+                <DateTime />
                 <form onSubmit={handleFormSumbmit} className="input">
                     <input type="text" placeholder="Enter the task here..." autoComplete="off" value={inputValue} onChange={(e) => setinputValue(e.target.value)} />
                     <button type="submit">Add</button>

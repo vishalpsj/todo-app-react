@@ -15,6 +15,9 @@
     html{
         font-size: 75%;
     }
+    h1{
+        font-size: 3.5rem;
+    }
     .input{
         width: 80%;
     }
@@ -29,6 +32,9 @@
 @media screen and (min-width: 1024px){
     html{
         font-size: 81.25%;
+    }
+    h1{
+        font-size: 4rem;
     }
     .input{
         width: 75%;
