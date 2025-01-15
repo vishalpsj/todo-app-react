@@ -1,4 +1,9 @@
 .dateTime{
     font-size: 1.5rem;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
