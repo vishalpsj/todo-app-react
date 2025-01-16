@@ -95,8 +95,9 @@ input::placeholder {
 .todoControl {
     width: 20%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
 .check {
