@@ -1,24 +1,5 @@
-import { useState } from "react"
+export const TodoForm = ({ handleFormSumbmit, inputValue, handleInputChange }) => {
 
-export const TodoForm = ({ task, setTask }) => {
-    const [inputValue, setinputValue] = useState("")
-
-    const handleInputChange = (value) => {
-        setinputValue(value)
-    }
-
-    const handleFormSumbmit = (e) => {
-        e.preventDefault()
-        if (!inputValue) return
-
-        if (task.includes(inputValue)) {
-            setinputValue("")
-            return
-        }
-
-        setTask((prevTask) => [...prevTask, inputValue])
-        setinputValue("")
-    }
     return (
         <>
             <form onSubmit={handleFormSumbmit} className="input">
