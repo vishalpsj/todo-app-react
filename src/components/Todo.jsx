@@ -8,7 +8,7 @@ import { ClearButton } from './ClearButton';
 
 
 export const Todo = () => {
-    const [inputValue, setinputValue] = useState("")
+
     const [task, setTask] = useState([])
 
 
@@ -21,7 +21,7 @@ export const Todo = () => {
         <div className="container">
             <h1>To do App</h1>
             <DateTime />
-            <TodoForm inputValue={inputValue} setinputValue={setinputValue} task={task} setTask={setTask} />
+            <TodoForm task={task} setTask={setTask} />
             <TodoUlSection task={task} setTask={setTask} />
             <ClearButton handleClearAllBtn={handleClearAllBtn} />
         </div>
