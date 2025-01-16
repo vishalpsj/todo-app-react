@@ -112,7 +112,6 @@ input::placeholder {
 .check:hover {
     color: green;
     background-color: transparent;
-
 }
 
 .dlt {
@@ -156,4 +155,13 @@ input::placeholder {
 
 .notChecked{
     text-decoration: none;
+}
+
+.ticked{
+    background-color: orange;
+}
+.ticked:hover{
+    background-color: rgb(130, 144, 1);
+    color: #fff;
+
 }

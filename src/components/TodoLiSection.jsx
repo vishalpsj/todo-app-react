@@ -8,7 +8,7 @@ export const TodoLiSection = ({handleDltClick, curTask, handleCheckClick, checke
                     <span className={checked?"checkList": "notChecked"}>{curTask}</span>
                 </div>
                 <div className="todoControl">
-                    <MdCheck className='check' onClick={() => handleCheckClick(curTask)} />
+                    <MdCheck className={`check ${checked? "ticked": "notTicked"}`} onClick={() => handleCheckClick(curTask)} />
                     <MdDeleteForever className='dlt' onClick={() => handleDltClick(curTask)} />
                 </div>
             </li>
