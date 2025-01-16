@@ -1,17 +1,14 @@
 import { MdCheck, MdDeleteForever } from "react-icons/md";
-export const TodoLiSection = ({task, setTask, curTask}) => {
-    const handleDltClick = (value) => {
-        const updatedTask = task.filter((curTask) => curTask !== value)
-        setTask(updatedTask)
-    }
+export const TodoLiSection = ({handleDltClick, curTask, handleCheckClick, checked}) => {
+
     return (
         <>
             <li className='todoItem'>
                 <div className="todoTask">
-                    {curTask}
+                    <span className={checked?"checkList": "notChecked"}>{curTask}</span>
                 </div>
                 <div className="todoControl">
-                    <MdCheck className='check' />
+                    <MdCheck className='check' onClick={() => handleCheckClick(curTask)} />
                     <MdDeleteForever className='dlt' onClick={() => handleDltClick(curTask)} />
                 </div>
             </li>

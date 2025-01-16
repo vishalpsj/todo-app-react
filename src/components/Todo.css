@@ -149,3 +149,11 @@ input::placeholder {
 .clear:hover{
     background-color: red;
 }
+
+.checkList{
+    text-decoration: line-through;
+}
+
+.notChecked{
+    text-decoration: none;
+}

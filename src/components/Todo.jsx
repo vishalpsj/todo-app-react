@@ -9,39 +9,63 @@ import { TodoLiSection } from './TodoLiSection';
 export const Todo = () => {
 
     const [task, setTask] = useState([])
-    const [inputValue, setinputValue] = useState("")
+    const [inputValue, setinputValue] = useState({})
 
     const handleInputChange = (value) => {
-        setinputValue(value)
+        setinputValue({id:value, content:value, checked:false})
     }
+
+    const {id, content, checked} = inputValue
 
     const handleFormSumbmit = (e) => {
         e.preventDefault()
-        if (!inputValue) return
+        if (!content) return
 
-        if (task.includes(inputValue)) {
-            setinputValue("")
+        const ifMatched = task.find((curTask) => curTask.content === content)
+        if(ifMatched){
+            setinputValue({id:"", content:"", checked:false})
             return
         }
 
-        setTask((prevTask) => [...prevTask, inputValue])
-        setinputValue("")
+        setTask((prevTask) => [...prevTask, {id, content, checked}])
+        setinputValue({id:"", content:"", checked:false})
     }
 
     const handleClearAllBtn = () => {
         setTask([])
     }
 
+    const handleDltClick = (value) => {
+        const updatedTask = task.filter((curTask) => curTask.content !== value)
+        setTask(updatedTask)
+    }
+
+    const handleCheckClick = (content) => {
+        const updatedTask = task.map((curTask) => {
+            if(curTask.content === content){
+                return {...curTask, checked: !curTask.checked}
+            } else{
+                return curTask
+            }
+        })
+        setTask(updatedTask)
+    }
+
     return (
         <div className="container">
             <h1>To do App</h1>
             <DateTime />
-            <TodoForm inputValue={inputValue} handleFormSumbmit={handleFormSumbmit} handleInputChange={handleInputChange} />
+            <TodoForm inputValue={content} handleFormSumbmit={handleFormSumbmit} handleInputChange={handleInputChange} />
             <ul className='unorderedList'>
                         {
-                            task.map((curTask, index) => {
+                            task.map((curTask) => {
                                 return (
-                                    <TodoLiSection  key={index} curTask={curTask} task={task} setTask={setTask} />
+                                    <TodoLiSection  
+                                    key={curTask.id} 
+                                    curTask={curTask.content} 
+                                    handleDltClick={handleDltClick} 
+                                    handleCheckClick={handleCheckClick} 
+                                    checked={curTask.checked}/>
                                 )
                             })
                         }
