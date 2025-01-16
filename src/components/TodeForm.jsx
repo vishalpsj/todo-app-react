@@ -1,4 +1,17 @@
-export const TodoForm = ({handleFormSumbmit, inputValue, setinputValue}) => {
+export const TodoForm = ({inputValue, setinputValue, task, setTask}) => {
+        const handleFormSumbmit = (e) => {
+            e.preventDefault()
+    
+            if (!inputValue) return
+    
+            if (task.includes(inputValue)) {
+                setinputValue("")
+                return
+            }
+    
+            setTask((prevTask) => [...prevTask, inputValue])
+            setinputValue("")
+        }
     return (
         <>
             <form onSubmit={handleFormSumbmit} className="input">

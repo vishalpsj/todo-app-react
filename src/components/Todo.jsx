@@ -11,19 +11,7 @@ export const Todo = () => {
     const [inputValue, setinputValue] = useState("")
     const [task, setTask] = useState([])
 
-    const handleFormSumbmit = (e) => {
-        e.preventDefault()
 
-        if (!inputValue) return
-
-        if (task.includes(inputValue)) {
-            setinputValue("")
-            return
-        }
-
-        setTask((prevTask) => [...prevTask, inputValue])
-        setinputValue("")
-    }
 
     const handleClearAllBtn = () => {
         setTask([])
@@ -33,7 +21,7 @@ export const Todo = () => {
         <div className="container">
             <h1>To do App</h1>
             <DateTime />
-            <TodoForm handleFormSumbmit={handleFormSumbmit} inputValue={inputValue} setinputValue={setinputValue} />
+            <TodoForm inputValue={inputValue} setinputValue={setinputValue} task={task} setTask={setTask} />
             <TodoUlSection task={task} setTask={setTask} />
             <ClearButton handleClearAllBtn={handleClearAllBtn} />
         </div>
