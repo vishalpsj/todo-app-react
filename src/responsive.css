@@ -16,7 +16,7 @@
         font-size: 75%;
     }
     h1{
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
     .input{
         width: 80%;
@@ -44,7 +44,7 @@
     }
     .todoControl{
         justify-content: center;
-        gap: 3rem;
+        gap: 1rem;
     }
 
 }
