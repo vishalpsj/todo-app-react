@@ -8,7 +8,14 @@ import { TodoLiSection } from './TodoLiSection';
 
 export const Todo = () => {
 
-    const [task, setTask] = useState([])
+    const todoKey = "reactTodoApp"
+
+    const [task, setTask] = useState(() => {
+        const getTodoFromLocal = localStorage.getItem(todoKey)
+        if(!getTodoFromLocal) return []
+        return JSON.parse(getTodoFromLocal)
+    })
+    
     const [inputValue, setinputValue] = useState({})
 
     const handleInputChange = (value) => {
@@ -50,6 +57,8 @@ export const Todo = () => {
         })
         setTask(updatedTask)
     }
+
+    localStorage.setItem(todoKey, JSON.stringify(task))
 
     return (
         <div className="container">
