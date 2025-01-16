@@ -16,13 +16,13 @@ export const DateTime = () => {
     // const date = new Date().toLocaleDateString(undefined, dateFormat)
 
     const [date, setdate] = useState(new Date().toLocaleDateString(undefined, dateFormat))
-    const [time, settime] = useState(new Date().toLocaleTimeString())
+    const [time, settime] = useState(new Date().toLocaleTimeString('en-US', { hour12: true }))
 
 
     useEffect(() => {
         const intervalId = setInterval(() => {
             setdate(new Date().toLocaleDateString(undefined, dateFormat))
-            settime(new Date().toLocaleTimeString())
+            settime(new Date().toLocaleTimeString('en-US', { hour12: true }))
         }, 1000);
         return () => clearInterval(intervalId)
 
