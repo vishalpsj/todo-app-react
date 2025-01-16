@@ -75,7 +75,7 @@ input::placeholder {
     justify-content: space-between;
     align-items: center;
     background-color: #ddd;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     padding: .5rem 1rem;
     border-radius: 20px;
     transition: all 0.3s;
@@ -132,7 +132,7 @@ input::placeholder {
 .clear{
     background-color: rgba(255, 0, 0, 0.333);
     color: #fff;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     padding: .5rem 1.5rem;
     border: none;
     border-radius: 10px;
