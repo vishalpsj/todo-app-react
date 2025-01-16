@@ -3,8 +3,8 @@ import './Todo.css'
 import '../responsive.css'
 import { DateTime } from './DateTime';
 import { TodoForm } from './TodeForm';
-import { TodoUlSection } from './TodoUlSection';
 import { ClearButton } from './ClearButton';
+import { TodoLiSection } from './TodoLiSection';
 
 export const Todo = () => {
 
@@ -37,7 +37,15 @@ export const Todo = () => {
             <h1>To do App</h1>
             <DateTime />
             <TodoForm inputValue={inputValue} handleFormSumbmit={handleFormSumbmit} handleInputChange={handleInputChange} />
-            <TodoUlSection task={task} setTask={setTask} />
+            <ul className='unorderedList'>
+                        {
+                            task.map((curTask, index) => {
+                                return (
+                                    <TodoLiSection  key={index} curTask={curTask} task={task} setTask={setTask} />
+                                )
+                            })
+                        }
+                    </ul>
             <ClearButton handleClearAllBtn={handleClearAllBtn} />
         </div>
     )
