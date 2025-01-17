@@ -91,7 +91,7 @@ export const Todo = () => {
                     })
                 }
             </ul>
-            <ClearButton handleClearAllBtn={handleClearAllBtn} />
+            {Object.keys(task).length > 0 && <ClearButton handleClearAllBtn={handleClearAllBtn} />}
         </div>
     )
 }
