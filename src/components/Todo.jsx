@@ -39,7 +39,15 @@ export const Todo = () => {
     }
 
     const handleClearAllBtn = () => {
-        setTask([])
+        if(task){
+            const userConfirmation = confirm("Are you sure you want to clear all tasks? This action cannot be undone.")
+            if(userConfirmation){
+                setTask([])
+            }
+            else{
+                return
+            }
+        }
     }
 
     const handleDltClick = (value) => {
