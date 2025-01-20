@@ -1,6 +1,6 @@
 .container {
-    width: 90vw;
-    height: 95vh;
+    width: 90dvw;
+    height: 95dvh;
     background-color: #0000002f;
     backdrop-filter: blur(10px);
     border-radius: 20px;
